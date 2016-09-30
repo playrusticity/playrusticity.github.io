@@ -92,10 +92,10 @@ h2:after {
 }
 
 p {
-    margin: 1rem 0;
+    margin-top: 1rem;
 }
-h2 + p {
-    margin-top: 2rem;
+p:first-child {
+    margin-top: 0;
 }
 
 code {
@@ -106,23 +106,23 @@ code {
 pre {
     cursor: text;
     font-family: code;
-    margin: 2rem 0;
+    margin-top: 1rem;
     position: relative;
 }
-pre:last-child {
-    margin-bottom: 1rem;
+pre:first-child {
+    margin-top: 0;
 }
 
 body {
     align-items: center;
     background: hsl(10, 15%, 15%);
-    border: 2rem solid hsla(0, 0%, 0%, 0.2);
+    border: 2.5rem solid hsla(0, 0%, 0%, 0.2);
     color: #ffffff;
     display: flex;
     flex-direction: column;
     justify-content: center;
     min-height: 100vh;
-    padding: 3rem;
+    padding: 2.5rem;
 }
 
 div.background {
@@ -143,30 +143,50 @@ body > section {
     width: 90rem;
 }
 
+body > header {
+    margin-bottom: 3rem;
+}
+
+body > footer,
 body > section {
-    margin-top: 2rem;
-    padding-right: 46rem;
-    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+body > section {
+    padding-bottom: 3rem;
+}
+body > footer > h2,
+body > section > h2 {
+    flex-shrink: 0;
+    flex-grow: 1;
+    flex-basis: 100%;
 }
 body > section > h2 {
     margin-bottom: 3rem;
 }
+body > footer > div,
+body > section > div {
+    flex-basis: 48rem;
+    flex-shrink: 1;
+}
 
 body > section > aside {
-    font-size: 1.75rem;
-    left: 47rem;
-    margin-top: 2rem;
-    position: absolute;
-    right: 1rem;
-    top: 3rem;
+    flex-basis: 35rem;
+    flex-shrink: 1;
+}
+body > section > aside {
+    align-self: start;
+    font-size: 1.6rem;
+    position: relative;
 }
 body > section > aside:before {
     background: hsla(0, 0%, 0%, 0.2);
-    bottom: 0;
+    bottom: -1rem;
     content: '';
     left: -1rem;
     position: absolute;
     right: -1rem;
-    top: 0;
+    top: -1rem;
     z-index: -1;
 }
