@@ -1,0 +1,172 @@
+@font-face {
+    font-family: heading;
+    src: url(rust.woff);
+}
+@font-face {
+    font-family: body;
+    src: url(source-sans-pro-light.woff);
+}
+@font-face {
+    font-family: body;
+    font-style: italic;
+    src: url(source-sans-pro-light-italic.woff);
+}
+@font-face {
+    font-family: code;
+    src: url(source-code-pro-light.woff);
+}
+@font-face {
+    font-family: code;
+    font-style: italic;
+    src: url(source-code-pro-light-italic.woff);
+}
+
+* {
+    border: none;
+    box-sizing: border-box;
+    font-family: inherit;
+    font-style: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: body;
+    font-size: 1vw;
+    font-weight: lighter;
+    line-height: 2.75vw;
+}
+body {
+    cursor: default;
+    font-size: 2rem;
+    overflow-x: hidden;
+}
+
+@media (min-width: 1000px) {
+    html {
+        font-size: 10px;
+        line-height: 27.5px;
+    }
+}
+
+a {
+    color: hsl(8.5, 65.5%, 48.8%);
+    cursor: pointer;
+}
+a:hover {
+    color: #ffffff;
+}
+
+h1,
+h2 {
+    color: hsl(0, 0%, 95%);
+    font-family: heading;
+    line-height: 1;
+}
+
+h1 {
+    font-size: 8rem;
+}
+
+h2 {
+    font-size: 3rem;
+    position: relative;
+    white-space: nowrap;
+}
+h2:after {
+    background: hsl(8.5, 65.5%, 48.8%);
+    content: 'X';
+    color: hsl(8.5, 65.5%, 48.8%);
+    cursor: default;
+    display: inline-block;
+    line-height: 0.88;
+    overflow: hidden;
+}
+h2:after {
+    background: linear-gradient(to right, hsl(8.5, 65.5%, 48.8%), hsla(8.5, 65.5%, 48.8%, 0));
+    margin-right: -100vw;
+    width: 100vw;
+}
+
+p {
+    margin: 1rem 0;
+}
+h2 + p {
+    margin-top: 2rem;
+}
+
+code {
+    cursor: text;
+    font-family: code;
+}
+
+pre {
+    cursor: text;
+    font-family: code;
+    margin: 2rem 0;
+    position: relative;
+}
+pre:last-child {
+    margin-bottom: 1rem;
+}
+
+body {
+    align-items: center;
+    background: hsl(10, 15%, 15%);
+    border: 1rem solid hsla(0, 0%, 0%, 0.2);
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 4rem;
+}
+
+div.background {
+    background: url('background.jpg') no-repeat center;
+    bottom: -1rem;
+    left: -1rem;
+    filter: blur(0.5rem);
+    opacity: 0.5;
+    position: fixed;
+    right: -1rem;
+    top: -1rem;
+    z-index: -1;
+}
+
+body > header,
+body > footer,
+body > section {
+    width: 90rem;
+}
+
+body > section {
+    margin-top: 2rem;
+    padding-right: 46rem;
+    position: relative;
+}
+body > section > h2 {
+    margin-bottom: 3rem;
+}
+
+body > section > aside {
+    font-size: 1.75rem;
+    left: 47rem;
+    margin-top: 2rem;
+    position: absolute;
+    right: 1rem;
+    top: 3rem;
+}
+body > section > aside:before {
+    background: hsla(0, 0%, 0%, 0.2);
+    bottom: 0;
+    content: '';
+    left: -1rem;
+    position: absolute;
+    right: -1rem;
+    top: 0;
+    z-index: -1;
+}
