@@ -116,13 +116,13 @@ pre:last-child {
 body {
     align-items: center;
     background: hsl(10, 15%, 15%);
-    border: 1rem solid hsla(0, 0%, 0%, 0.2);
+    border: 2rem solid hsla(0, 0%, 0%, 0.2);
     color: #ffffff;
     display: flex;
     flex-direction: column;
     justify-content: center;
     min-height: 100vh;
-    padding: 4rem;
+    padding: 3rem;
 }
 
 div.background {
