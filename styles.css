@@ -69,26 +69,14 @@ h2 {
 
 h1 {
     font-size: 8rem;
+    line-height: 0.88;
+    text-shadow: 0 0 25px hsl(10, 15%, 15%);
 }
 
 h2 {
     font-size: 3rem;
-    position: relative;
-    white-space: nowrap;
-}
-h2:after {
-    background: hsl(8.5, 65.5%, 48.8%);
-    content: 'X';
-    color: hsl(8.5, 65.5%, 48.8%);
-    cursor: default;
-    display: inline-block;
     line-height: 0.88;
-    overflow: hidden;
-}
-h2:after {
-    background: linear-gradient(to right, hsl(8.5, 65.5%, 48.8%), hsla(8.5, 65.5%, 48.8%, 0));
-    margin-right: -100vw;
-    width: 100vw;
+    text-shadow: 0 0 15px hsl(10, 15%, 15%);
 }
 
 p {
@@ -123,6 +111,7 @@ body {
     justify-content: center;
     min-height: 100vh;
     padding: 2.5rem;
+    text-shadow: 0 0 5px hsl(10, 15%, 15%);
 }
 
 div.background {
@@ -161,9 +150,23 @@ body > section > h2 {
     flex-shrink: 0;
     flex-grow: 1;
     flex-basis: 100%;
+    position: relative;
+    white-space: nowrap;
 }
 body > section > h2 {
     margin-bottom: 3rem;
+}
+body > footer > h2:after,
+body > section > h2:after {
+    background: linear-gradient(to right, hsl(8.5, 65.5%, 48.8%), hsla(8.5, 65.5%, 48.8%, 0));
+    content: 'X';
+    color: hsl(8.5, 65.5%, 48.8%);
+    cursor: default;
+    display: inline-block;
+    margin-right: -100vw;
+    overflow: hidden;
+    text-indent: -100vw;
+    width: 100vw;
 }
 body > footer > div,
 body > section > div {
@@ -172,6 +175,7 @@ body > section > div {
 }
 
 body > section > aside {
+    color: hsl(0, 0%, 85%);
     flex-basis: 35rem;
     flex-shrink: 1;
 }
