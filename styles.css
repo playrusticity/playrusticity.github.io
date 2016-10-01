@@ -199,3 +199,6 @@ body > section > aside:before {
     top: -1rem;
     z-index: -1;
 }
+body > section:last-child {
+    padding-bottom: 0;
+}
